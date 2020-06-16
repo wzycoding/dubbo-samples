@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+    <!-- 服务提供方应用名称，方便用于依赖跟踪 -->
+    <dubbo:application name="echo-provider"/>
+
+    <!-- 使用虚拟机中的Zookeeper作为注册中心 -->
+    <dubbo:registry address="zookeeper://192.168.152.111:2181"/>
+
+    <!-- 只用Dubbo协议并且指定监听20880端口 -->
+    <dubbo:protocol name="dubbo" port="20800"/>
+
+    <!-- 通过XML方式把实现配置为Bean，让Spring托管和实例化 -->
+    <bean id="echoService" class="com.wzy.dubbo.samples.echo.impl.EchoServiceImpl"/>
+
+    <!-- 声明要暴露的接口 -->
+    <dubbo:service interface="com.wzy.dubbo.samples.echo.api.EchoService"
+                   ref="echoService"/>
+
+</beans>

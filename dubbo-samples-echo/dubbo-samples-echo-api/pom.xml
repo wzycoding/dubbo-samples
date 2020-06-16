@@ -3,19 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dubbo-samples</artifactId>
+        <artifactId>dubbo-samples-echo</artifactId>
         <groupId>com.wzy</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbo-samples-echo</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>dubbo-samples-echo-api</module>
-        <module>dubbo-samples-echo-server</module>
-        <module>dubbo-samples-echo-client</module>
-    </modules>
+    <artifactId>dubbo-samples-echo-api</artifactId>
 
 
 </project>
