@@ -18,6 +18,7 @@ public class AnnotationConsumer {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(ConsumerConfiguration.class);
         context.start();
+        // 发起服务调用
         EchoConsumer echoService = context.getBean(EchoConsumer.class);
         String hello = echoService.echo("Hello world!");
         System.out.println("result：" + hello);
