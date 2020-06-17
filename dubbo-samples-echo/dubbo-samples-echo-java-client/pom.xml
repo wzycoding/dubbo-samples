@@ -19,4 +19,26 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!-- 使用exec-maven-plugin插件运行java文件 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>run-echo-client</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.wzy.dubbo.samples.echo.EchoConsumer</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

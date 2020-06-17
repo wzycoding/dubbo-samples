@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dubbo-samples-echo</module>
-        <module>dubbo-samples-echo-java-client</module>
     </modules>
 
     <properties>
